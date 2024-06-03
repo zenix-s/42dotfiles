@@ -1,0 +1,41 @@
+# Replace ls with exa
+# alias l='exa -al --color=always  --header --group-directories-first --icons' # preferred listing
+# alias ls='exa -al --color=always --header --group-directories-first --icons' # preferred listing
+# alias la='exa -a --color=always --group-directories-first --icons'  # all files and dirs
+# alias ll='exa -l --color=always --header --group-directories-first --icons'  # long format
+# alias lt='exa -aT --color=always --group-directories-first --icons' # tree listing
+# alias l.='exa -ald --color=always --group-directories-first --icons .*' # show only dotfiles
+alias l='ls --color -lah'
+
+# Replace some more things with better alternatives
+# alias cat='bat --style header --style snip --style changes ' [ ! -x /usr/bin/yay ] && [ -x /usr/bin/paru ] && alias yay='paru'
+# alias cat='bat --style header --style snip --style changes --theme="OneHalfDark"'
+
+# C compiler
+alias gflags='gcc -Wall -Wextra -Werror'
+
+# Personales
+
+# Common use
+alias cd='cd'
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias .....='cd ../../../..'
+alias ......='cd ../../../../..'
+alias dir='dir --color=auto'
+
+# git
+function gitc()
+{
+  echo -n "Introduce el header del commit: \n"
+  read header
+
+  echo -n "Introduce el body del commit: \n"
+  read body
+
+  git add .
+  git commit -m "$header" -m "$body"
+
+  echo "Commit realizado correctamente"
+}
