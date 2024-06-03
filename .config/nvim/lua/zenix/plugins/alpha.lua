@@ -34,7 +34,7 @@ return {
 			}
 		end
 
-		dashboard.section.header.val = header_neovim1()
+		dashboard.section.header.val = default_header()
 		alpha.setup(dashboard.opts)
 	end,
 }

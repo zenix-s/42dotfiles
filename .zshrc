@@ -81,3 +81,5 @@ _comp_options+=(globdots)
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 alias nvim="~/Apps/nvim.appimage"
+
+PATH=~/.console-ninja/.bin:$PATH

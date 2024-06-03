@@ -20,27 +20,27 @@ return {
       local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
       local lspconfig = require("lspconfig")
-      lspconfig.tsserver.setup({
-        capabilities = capabilities
-      })
-      lspconfig.html.setup({
-        capabilities = capabilities
-      })
       lspconfig.lua_ls.setup({
         capabilities = capabilities
       })
       lspconfig.clangd.setup({
         capabilities = capabilities
       })
-      lspconfig.tsserver.setup({
-        capabilities = capabilities
-      })
-      lspconfig.angularls.setup({
-        capabilities = capabilities
-      })
-      lspconfig.tailwindcss.setup({
-        capabilities = capabilities
-      })
+      -- lspconfig.tsserver.setup({
+      --   capabilities = capabilities
+      -- })
+      -- lspconfig.html.setup({
+      --   capabilities = capabilities
+      -- })
+      -- lspconfig.tsserver.setup({
+      --   capabilities = capabilities
+      -- })
+      -- lspconfig.angularls.setup({
+      --   capabilities = capabilities
+      -- })
+      -- lspconfig.tailwindcss.setup({
+      --   capabilities = capabilities
+      -- })
 
 
       vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
@@ -49,6 +49,7 @@ return {
       vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, {})
       vim.keymap.set('n', '<leader>re', vim.lsp.buf.rename, {})
     end,
+
   },
   {
     "nvimtools/none-ls.nvim",
