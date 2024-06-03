@@ -5,7 +5,9 @@
 # alias ll='exa -l --color=always --header --group-directories-first --icons'  # long format
 # alias lt='exa -aT --color=always --group-directories-first --icons' # tree listing
 # alias l.='exa -ald --color=always --group-directories-first --icons .*' # show only dotfiles
-alias l='ls --color -lah'
+alias l='ls --color=always -lah --group-directories-first'
+alias ll='ls --color=always -lah --group-directories-first'
+alias ls='ls --color=always --group-directories-first'
 
 # Replace some more things with better alternatives
 # alias cat='bat --style header --style snip --style changes ' [ ! -x /usr/bin/yay ] && [ -x /usr/bin/paru ] && alias yay='paru'

@@ -8,4 +8,7 @@ return {
       mail = "serferna@student.42madrid.com",
     })
   end,
+  keys = {
+    "<F1>"
+  }
 }

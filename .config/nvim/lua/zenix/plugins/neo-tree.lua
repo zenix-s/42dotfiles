@@ -10,5 +10,4 @@ return {
     vim.keymap.set("n", "<leader>ee", ":Neotree toggle right<CR>", {})
     vim.keymap.set("n", "<leader>ef", ":Neotree focus right<CR>", {})
   end,
-
 }

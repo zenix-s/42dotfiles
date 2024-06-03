@@ -83,3 +83,6 @@ _comp_options+=(globdots)
 alias nvim="~/Apps/nvim.appimage"
 
 PATH=~/.console-ninja/.bin:$PATH
+
+# c-formatter-42
+alias c-format="~/.local/bin/c_formatter_42"
