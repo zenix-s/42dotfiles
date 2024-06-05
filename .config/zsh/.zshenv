@@ -15,3 +15,5 @@ export SAVEHIST=10000
 export dev="$HOME/Development"
 export dotfiles="$HOME/dotfiles"
 export vault="$HOME/Git_Vault"
+
+export TERM=xterm-256color
