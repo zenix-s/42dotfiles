@@ -1,6 +1,3 @@
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
 
 # Set the directory we want to store zinit and plugins
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
@@ -46,8 +43,6 @@ setopt extended_history     # Guarda información adicional en el historial (com
 # Expansión y coincidencia de patrones
 setopt extended_glob        # Habilita la coincidencia de patrones avanzada (extended globbing)
 
-# Add in Powerlevel10k
-zinit ice depth=1; zinit light romkatv/powerlevel10k
 
 # Add in zsh plugins
 zinit light zsh-users/zsh-syntax-highlighting
@@ -77,10 +72,9 @@ zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 zstyle ':completion:*' menu select
 _comp_options+=(globdots)
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
 PATH=~/.console-ninja/.bin:$PATH
 
 # c-formatter-42
 alias c-format="~/.local/bin/c_formatter_42"
+
+eval "$(~/Apps/my_posh/oh-my-posh init zsh --config ~/.config/oh_my_posh/amro.omp.toml)"
